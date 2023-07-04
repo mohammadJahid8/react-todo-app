@@ -1,28 +1,38 @@
 import "./App.css";
-import { Route, Routes } from "react-router-dom";
-import RiderSignup from "./Components/Rider/RiderAuths/RiderSignup";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import Navbar from "./components/Navbar";
+import TodoList from "./components/TodoList";
 
 function App() {
   return (
-    <div className="App">
-      <div class="blurdiv"></div>
+    <div className="grid place-items-center bg-blue-100 h-screen px-6 font-sans">
+      <Navbar />
 
-      <div class="blurdiv2"></div>
-      <Routes>
-        <Route path="/" element={<RiderSignup />} />
-        {/* <Route path="/singup" element={<Signup />} />
-        <Route path="/signin" element={<Signin />} />
-        <Route
-          path="/billings"
-          element={
-            <ProtectedRoute>
-              <BillTable />
-            </ProtectedRoute>
-          }
-        /> */}
-      </Routes>
+      <div className="w-full max-w-3xl shadow-lg rounded-lg p-6 bg-white">
+        <Header />
+
+        <hr className="mt-4" />
+
+        <TodoList />
+
+        <hr className="mt-4" />
+
+        <Footer />
+      </div>
     </div>
   );
+
+  // return (
+  //   <div className="App">
+  //     <div class="blurdiv"></div>
+
+  //     <div class="blurdiv2"></div>
+  //     <div className="position-relative" style={{ zIndex: "99999999" }}>
+
+  //     </div>
+  //   </div>
+  // );
 }
 
 export default App;
