@@ -23,6 +23,11 @@ export default function Header() {
     }
   };
 
+  const clearHandler = () => {
+    const newTasks = tasks.filter((task) => !task.completed);
+    setTasks(newTasks);
+  };
+
   return (
     <div>
       <form
@@ -51,10 +56,7 @@ export default function Header() {
           <img className="w-4 h-4" src={tickImage} alt="Complete" />
           <span>Complete All Tasks</span>
         </li>
-        <li
-          className="cursor-pointer"
-          // onClick={clearHandler}
-        >
+        <li className="cursor-pointer" onClick={clearHandler}>
           Clear completed
         </li>
       </ul>
