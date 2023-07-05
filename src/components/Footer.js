@@ -8,15 +8,15 @@ export default function Footer() {
     setFilter(filter);
   };
 
-  const numberOfTodos = (noOfTodos) => {
-    switch (noOfTodos) {
+  const numberOfTasks = (noOfTasks) => {
+    switch (noOfTasks) {
       case 0:
         return "No task";
       case 1:
         return "1 task";
 
       default:
-        return `${noOfTodos} Task`;
+        return `${noOfTasks} Task`;
     }
   };
 
@@ -24,7 +24,7 @@ export default function Footer() {
 
   return (
     <div className="mt-4 flex justify-between text-xs text-gray-500">
-      <p>{numberOfTodos(taskRemaining)} left</p>
+      <p>{numberOfTasks(taskRemaining)} left</p>
       <ul className="flex space-x-1 items-center text-xs">
         <li
           onClick={() => handleFilterTasks("all")}

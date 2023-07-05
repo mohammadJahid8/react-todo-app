@@ -1,5 +1,4 @@
 import toast, { Toaster } from "react-hot-toast";
-
 import tickImage from "../assets/images/double-tick.png";
 import noteImage from "../assets/images/notes.png";
 import plusImage from "../assets/images/plus.png";
@@ -28,6 +27,13 @@ export default function Header() {
     setTasks(newTasks);
   };
 
+  const completeHandler = () => {
+    const newTasks = tasks.map((task) => {
+      return { ...task, completed: true };
+    });
+    setTasks(newTasks);
+  };
+
   return (
     <div>
       <form
@@ -49,10 +55,7 @@ export default function Header() {
       </form>
 
       <ul className="flex justify-between my-4 text-xs text-gray-500">
-        <li
-          className="flex space-x-1 cursor-pointer"
-          // onClick={completeHandler}
-        >
+        <li className="flex space-x-1 cursor-pointer" onClick={completeHandler}>
           <img className="w-4 h-4" src={tickImage} alt="Complete" />
           <span>Complete All Tasks</span>
         </li>
