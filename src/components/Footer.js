@@ -2,29 +2,10 @@ import { useContext, useState } from "react";
 import { TodoContext } from "../Context/TodoContext";
 
 export default function Footer() {
-  const { tasks, setTasks } = useContext(TodoContext);
-  const [filter, setFilter] = useState("all");
+  const { filter, setFilter } = useContext(TodoContext);
 
   const handleFilterTasks = (filter) => {
     setFilter(filter);
-
-    // copy the tasks array into a new array
-    const tasksCopy = [...tasks];
-
-    const filteredTasks = tasksCopy.filter((task) => {
-      if (filter === "completed") {
-        console.log("tasks", tasks, "tasksCopy", tasksCopy);
-        return task.completed;
-      }
-      if (filter === "pending") {
-        return !task.completed;
-      }
-
-      return task;
-    });
-
-    const allTasks = tasks.slice();
-    setTasks(filteredTasks);
   };
 
   return (
