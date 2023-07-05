@@ -15,6 +15,38 @@ body {
   background-color: rgb(58, 34, 87) !important;
 }
 
+.todo-body {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(0.5px);
+  -webkit-backdrop-filter: blur(0.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.nav-bg {
+  background: rgba(117, 114, 114, 0.116);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(0.5px);
+  -webkit-backdrop-filter: blur(0.5px);
+  /* border-radius: 10px; */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.image-style {
+  filter: invert(80%);
+}
+
+.delete-image {
+  filter: invert(80%) sepia(9%) saturate(10000%) contrast(100%) hue-rotate(0deg)
+    brightness(100%);
+}
+
+.font-stylee {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+  letter-spacing: 1px;
+}
+
 .blurdiv {
   position: fixed;
   z-index: 1;

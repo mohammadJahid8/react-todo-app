@@ -20,7 +20,7 @@ export default function Todo({ task }) {
     setTasks(updatedTasks);
   };
   return (
-    <div className="flex justify-start items-center p-2 hover:bg-gray-100 hover:transition-all space-x-4 border-b border-gray-400/20 last:border-0">
+    <div className="flex justify-start items-center p-2 hover:bg-[#3d3350] hover:transition-all space-x-4 rounded-md border-b border-gray-400/20 last:border-0">
       <div
         className={`rounded-full bg-white border-2 border-gray-400 w-5 h-5 flex flex-shrink-0 justify-center items-center mr-2 ${
           task.completed && "border-green-500 focus-within:border-green-500"
@@ -30,7 +30,7 @@ export default function Todo({ task }) {
           type="checkbox"
           checked={task.completed}
           onChange={() => handleCompleteTask(task.id)}
-          className="opacity-0 absolute rounded-full cursor-pointer"
+          className="opacity-0  absolute rounded-full cursor-pointer"
         />
         {task.completed && (
           <svg
@@ -42,7 +42,11 @@ export default function Todo({ task }) {
         )}
       </div>
 
-      <div className={`select-none flex-1 ${task.completed && "line-through"}`}>
+      <div
+        className={`select-none text-gray-300 flex-1 ${
+          task.completed && "line-through"
+        }`}
+      >
         {task?.name}
       </div>
 
@@ -50,7 +54,7 @@ export default function Todo({ task }) {
         title="remove this todo"
         onClick={() => handleDelete(task.id)}
         src={cancelImage}
-        className="flex-shrink-0 w-6 h-6 ml-2 cursor-pointer"
+        className="flex-shrink-0 w-6 h-6 ml-2 cursor-pointer delete-image"
         alt="Cancel"
       />
     </div>

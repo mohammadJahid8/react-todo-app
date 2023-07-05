@@ -23,7 +23,7 @@ export default function Footer() {
   const taskRemaining = tasks?.filter((task) => !task.completed).length;
 
   return (
-    <div className="mt-4 flex justify-between text-xs text-gray-500">
+    <div className="mt-4 flex justify-between text-xs text-gray-300">
       <p>{numberOfTasks(taskRemaining)} left</p>
       <ul className="flex space-x-1 items-center text-xs">
         <li
