@@ -12,7 +12,7 @@ function App() {
       <div className="w-full max-w-3xl shadow-lg rounded-lg p-6 bg-white">
         <Header />
 
-        <hr className="mt-4" />
+        <hr className="mt-4 text-gray-400" />
 
         <TodoList />
 

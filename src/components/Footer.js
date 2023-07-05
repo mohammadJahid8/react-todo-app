@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { TodoContext } from "../Context/TodoContext";
 
 export default function Footer() {
